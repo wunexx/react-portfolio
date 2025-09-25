@@ -109,7 +109,7 @@ function App() {
                 <div className="project-content">
                   <h2>Space Simulation</h2>
                   <h4>Space simulation built in Python with Pygame, using real physics formulas!</h4>
-                  <a href="https://github.com/wunexx/Conway-game-of-life" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/wunexx/Space-Simulation" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
                 </div>
               </div>

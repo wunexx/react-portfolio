@@ -11,6 +11,10 @@ body {
   padding: 0;  
   overflow-x: hidden;
   font-family: "Ubuntu", sans-serif;
+  background-image: 
+  radial-gradient(circle at 0% 45%, rgba(119,57,114,0.3) 0%, transparent 30%),
+  radial-gradient(circle at 100% 40%, rgba(119,57,114,0.3) 0%, transparent 40%),
+  radial-gradient(circle at 50% 100%, rgba(119,57,114,0.3) 0%, transparent 40%);
 }
 
 #root {
@@ -270,6 +274,7 @@ a {
   background-color: #262633;
   border-radius: 5px;
   text-align: center;
+  transition: scale 0.3s ease, color 0.3s ease;
 }
 
 .project-content a{
@@ -277,7 +282,6 @@ a {
 }
 
 a:hover {
-  transition: scale 0.3s ease, color 0.3s ease;
   scale: 1.1;
   color: #bc0048;
 }
