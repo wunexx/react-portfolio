@@ -1,4 +1,11 @@
-import logo from './assets/bg1.jpg'
+import logo from './assets/bg1.jpg';
+import physicsSimulation from "./assets/physics.gif";
+import gameOfLife from "./assets/gameoflife.gif";
+import space from "./assets/space.gif";
+import slimefactory from "./assets/slimefactory.gif";
+
+import { FaItchIo } from 'react-icons/fa';
+
 import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { FaGithub, FaTelegramPlane, FaEnvelope } from 'react-icons/fa';
 import SkillBar from './components/SkillBar.tsx'
@@ -28,7 +35,7 @@ function App() {
             <h2>Skills</h2>
             <div className="skill-container">
               <SkillBar skill="Html/Css" level={90}></SkillBar>
-              <SkillBar skill="Unity C#" level={80}></SkillBar>
+              <SkillBar skill="Unity C#" level={70}></SkillBar>
               <SkillBar skill="Python" level={60}></SkillBar>
               <SkillBar skill="MySql" level={60}></SkillBar>
               <SkillBar skill="JavaScript" level={60}></SkillBar>
@@ -78,42 +85,42 @@ function App() {
 
             <div className="projects-container">
               <div className="project-card">
-                <img src={logo} className="project-image" alt="project image" />
+                <img src={physicsSimulation} className="project-image" alt="project image" />
                 <div className="project-content">
-                  <h2>Project</h2>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                  <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
+                  <h2>Physics Simulation</h2>
+                  <h4>Simple Cellular Automata physics simulation made with pygame!</h4>
+                  <a href="https://github.com/wunexx/Physics-Simulation" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={logo} className="project-image" alt="project image" />
+                <img src={gameOfLife} className="project-image" style={{objectPosition: "center 10px"}} alt="project image" />
                 <div className="project-content">
-                  <h2>Project</h2>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                  <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
+                  <h2>Cownay's Game Of Life</h2>
+                  <h4>Simple Cellular Automata based on Conway's Game Of Life made with pygame and numpy!</h4>
+                  <a href="https://github.com/wunexx/Conway-game-of-life" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={logo} className="project-image" alt="project image" />
+                <img src={space} className="project-image" alt="project image" />
                 <div className="project-content">
-                  <h2>Project</h2>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                  <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
+                  <h2>Space Simulation</h2>
+                  <h4>Space simulation built in Python with Pygame, using real physics formulas!</h4>
+                  <a href="https://github.com/wunexx/Conway-game-of-life" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={logo} className="project-image" alt="project image" />
+                <img src={slimefactory} className="project-image" alt="project image" />
                 <div className="project-content">
-                  <h2>Project</h2>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                  <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="icon"/>Github</a>
+                  <h2>Slime Factory</h2>
+                  <h4>Slime-producing idle game built in Unity 2D.</h4>
+                  <a href="https://wunex.itch.io/slime-factory" target="_blank" rel="noopener noreferrer">
+                    <FaItchIo className="icon"/>Itch.io</a>
                 </div>
               </div>
 
