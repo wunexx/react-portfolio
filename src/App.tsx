@@ -3,6 +3,7 @@ import physicsSimulation from "./assets/physics.gif";
 import gameOfLife from "./assets/gameoflife.gif";
 import space from "./assets/space.gif";
 import slimefactory from "./assets/slimefactory.gif";
+import aiMazeAgent from "./assets/aiMazeAgent.gif";
 
 import { FaItchIo } from 'react-icons/fa';
 
@@ -71,7 +72,7 @@ function App() {
             <div>
               <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
                  <FaGithub className="icon"/>Github</a>
-              <a href="mailto:sanichgang16@gmail.com">
+              <a href="mailto:xwunex@gmail.com">
                   <FaEnvelope className="icon"/>Gmail</a>
               <a href="https://t.me/wunex1" target="_blank" rel="noopener noreferrer">
               <FaTelegramPlane className="icon"/>Telegram</a>
@@ -125,11 +126,11 @@ function App() {
               </div>
 
               <div className="project-card">
-                <img src={logo} className="project-image" alt="project image" />
+                <img src={aiMazeAgent} className="project-image" alt="project image" />
                 <div className="project-content">
-                  <h2>Project</h2>
-                  <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                  <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
+                  <h2>Maze Agent AI</h2>
+                  <h4>AI agent made in Unity 3D using ML-Agents, trained to navigate mazes, collect a key, and unlock a door.</h4>
+                  <a href="https://github.com/wunexx/Maze-Agent" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
                 </div>
               </div>
@@ -145,9 +146,7 @@ function App() {
               </div>
             </div>
           </div>
-          
         </div>
-
       </div>
     </>
   )
