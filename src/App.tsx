@@ -4,6 +4,7 @@ import gameOfLife from "./assets/gameoflife.gif";
 import space from "./assets/space.gif";
 import slimefactory from "./assets/slimefactory.gif";
 import aiMazeAgent from "./assets/aiMazeAgent.gif";
+import soccerAgent from "./assets/agentSoccers.gif";
 
 import { FaItchIo } from 'react-icons/fa';
 
@@ -136,11 +137,11 @@ function App() {
               </div>
 
               <div className="project-card">
-                  <img src={logo} className="project-image" alt="project image" />
+                  <img src={soccerAgent} className="project-image" alt="project image" />
                   <div className="project-content">
-                    <h2>Project</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-                    <a href="https://github.com/wunexx" target="_blank" rel="noopener noreferrer">
+                    <h2>Soccer AI Agents</h2>
+                    <h4>Unity simulation made using the ML-Agents toolkit, featuring two AI-controlled agents competing in a soccer match.</h4>
+                    <a href="https://github.com/wunexx/Soccer-Agents" target="_blank" rel="noopener noreferrer">
                       <FaGithub className="icon"/>Github</a>
                 </div>
               </div>
