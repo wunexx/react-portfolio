@@ -234,8 +234,14 @@ h3, h4 {
   color: #fff;
 }
 
-.project-content a {
-  width: 60%;
+.project-link-container{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.project-link-container a{
+  flex: 1;
   color: #fff;
   margin-top: 10px;
 }

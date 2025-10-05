@@ -1,17 +1,9 @@
-import logo from './assets/bg1.jpg';
-import physicsSimulation from "./assets/physics.gif";
-import gameOfLife from "./assets/gameoflife.gif";
-import space from "./assets/space.gif";
-import slimefactory from "./assets/slimefactory.gif";
-import aiMazeAgent from "./assets/aiMazeAgent.gif";
-import soccerAgent from "./assets/agentSoccers.gif";
+import { images } from "./images.tsx";
+import SkillBar from './components/SkillBar.tsx';
 
-import { FaItchIo } from 'react-icons/fa';
-
-import { GlobeAltIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import { FaGithub, FaTelegramPlane, FaEnvelope } from 'react-icons/fa';
-import SkillBar from './components/SkillBar.tsx'
-import './App.css'
+import { GlobeAltIcon, MapPinIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { FaGithub, FaTelegramPlane, FaEnvelope, FaItchIo } from 'react-icons/fa';
+import './App.css';
 
 function App() {
   return (
@@ -20,7 +12,7 @@ function App() {
         <div className='column'>
           <div className="basic">
             <div>
-              <img src={logo} alt="profile picture" />
+              <img src={images.logo} alt="profile picture" />
               <h2>Alex Selivanov</h2>
             </div>
             <div>
@@ -87,62 +79,76 @@ function App() {
 
             <div className="projects-container">
               <div className="project-card">
-                <img src={physicsSimulation} className="project-image" alt="project image" />
+                <img src={images.physicsSimulation} className="project-image" alt="project image" />
                 <div className="project-content">
                   <h2>Physics Simulation</h2>
                   <h4>Simple Cellular Automata physics simulation made with pygame!</h4>
-                  <a href="https://github.com/wunexx/Physics-Simulation" target="_blank" rel="noopener noreferrer">
+                  <div className="project-link-container">
+                    <a href="https://github.com/wunexx/Physics-Simulation" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
+                  </div>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={gameOfLife} className="project-image" style={{objectPosition: "center 10px"}} alt="project image" />
+                <img src={images.gameOfLife} className="project-image" style={{objectPosition: "center 10px"}} alt="project image" />
                 <div className="project-content">
                   <h2>Cownay's Game Of Life</h2>
                   <h4>Simple Cellular Automata based on Conway's Game Of Life made with pygame and numpy!</h4>
-                  <a href="https://github.com/wunexx/Conway-game-of-life" target="_blank" rel="noopener noreferrer">
+                  <div className="project-link-container">
+                    <a href="https://github.com/wunexx/Conway-game-of-life" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
+                  </div>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={space} className="project-image" alt="project image" />
+                <img src={images.space} className="project-image" alt="project image" />
                 <div className="project-content">
                   <h2>Space Simulation</h2>
                   <h4>Space simulation built in Python with Pygame, using real physics formulas!</h4>
-                  <a href="https://github.com/wunexx/Space-Simulation" target="_blank" rel="noopener noreferrer">
+                  <div className="project-link-container">
+                    <a href="https://github.com/wunexx/Space-Simulation" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
+                  </div>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={slimefactory} className="project-image" alt="project image" />
+                <img src={images.slimefactory} className="project-image" alt="project image" />
                 <div className="project-content">
                   <h2>Slime Factory</h2>
                   <h4>Slime-producing idle game built in Unity 2D.</h4>
-                  <a href="https://wunex.itch.io/slime-factory" target="_blank" rel="noopener noreferrer">
+                  <div className="project-link-container">
+                    <a href="https://wunex.itch.io/slime-factory" target="_blank" rel="noopener noreferrer">
                     <FaItchIo className="icon"/>Itch.io</a>
+                  </div>
                 </div>
               </div>
 
               <div className="project-card">
-                <img src={aiMazeAgent} className="project-image" alt="project image" />
+                <img src={images.aiMazeAgent} className="project-image" alt="project image" />
                 <div className="project-content">
                   <h2>Maze Agent AI</h2>
                   <h4>AI agent made in Unity 3D using ML-Agents, trained to navigate mazes, collect a key, and unlock a door.</h4>
-                  <a href="https://github.com/wunexx/Maze-Agent" target="_blank" rel="noopener noreferrer">
+                  <div className="project-link-container">
+                    <a href="https://github.com/wunexx/Maze-Agent" target="_blank" rel="noopener noreferrer">
                     <FaGithub className="icon"/>Github</a>
+                  </div>
                 </div>
               </div>
 
               <div className="project-card">
-                  <img src={soccerAgent} className="project-image" alt="project image" />
+                  <img src={images.soccerAgent} className="project-image" alt="project image" />
                   <div className="project-content">
                     <h2>Soccer AI Agents</h2>
                     <h4>Unity simulation made using the ML-Agents toolkit, featuring two AI-controlled agents competing in a soccer match.</h4>
-                    <a href="https://github.com/wunexx/Soccer-Agents" target="_blank" rel="noopener noreferrer">
+                    <div className="project-link-container">
+                      <a href="https://github.com/wunexx/Soccer-Agents" target="_blank" rel="noopener noreferrer">
                       <FaGithub className="icon"/>Github</a>
+                      <a href="https://wunexx.github.io/Soccer-Agents/" target="_blank" rel="noopener noreferrer">
+                      <ArrowTopRightOnSquareIcon className="icon"/>Project</a>
+                    </div>
                 </div>
               </div>
             </div>
