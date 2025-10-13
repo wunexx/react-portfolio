@@ -1,20 +1,34 @@
 /* ----------------------------- */
-/* Base */
+/* Base Colors & Variables */
+/* ----------------------------- */
+:root {
+  /* Background colors: cool blue/teal hue */
+  --bgcolor1: #0a1418;
+  --bgcolor2: #101c20;
+  --bgcolor3: #16262c;
+  --bgcolor4: #1c3036;
+  --bgcolor5: #243c44;
+  --bgcolor6: #2b4553; /* lighter than bgcolor5 */
+
+  /* Highlight colors: warm coral/orange hue */
+  --highlight1: #f7b19d;
+  --highlight2: #ffc8b3;
+  --highlight3: #ff6f3c;
+}
+
+/* ----------------------------- */
+/* Global Styles */
 /* ----------------------------- */
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #08080a;
-  margin: 0;  
-  padding: 0;  
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   font-family: "Ubuntu", sans-serif;
-  background-image: 
-  radial-gradient(circle at 0% 45%, rgba(119,57,114,0.3) 0%, transparent 30%),
-  radial-gradient(circle at 100% 40%, rgba(119,57,114,0.3) 0%, transparent 40%),
-  radial-gradient(circle at 50% 100%, rgba(119,57,114,0.3) 0%, transparent 40%);
+  background-color: var(--bgcolor1);
 }
 
 #root {
@@ -22,22 +36,25 @@ body {
   min-height: 100vh;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin: 5px 0;
   padding: 0;
 }
 
 h2 {
-  color: #bc0048;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--highlight3);
+  text-transform: uppercase;
 }
 
-h3, h4 {
-  color: #37374a;
+h3, h4, li {
+  line-height: 1.7;
+  color: var(--highlight2);
 }
 
 /* ----------------------------- */
-/* Container Layout */
+/* Layout Containers */
 /* ----------------------------- */
 .container {
   display: flex;
@@ -56,7 +73,7 @@ h3, h4 {
 }
 
 /* ----------------------------- */
-/* Divs*/
+/* Card / Div Styles */
 /* ----------------------------- */
 .basic,
 .skills,
@@ -64,24 +81,25 @@ h3, h4 {
 .projects,
 .contact,
 .small-div {
-  background-color: #0c0c0f;
-  border: 2px solid #14141a;
+  background-color: var(--bgcolor2);
+  border: 2px solid var(--bgcolor6);
   border-radius: 10px;
   padding: 16px;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.basic:hover,
+.skills:hover,
+.about-me:hover,
+.projects:hover,
+.contact:hover,
+.small-div:hover {
+  transform: translateY(-3px);
+  border: 2px solid var(--highlight1);
 }
 
 /* ----------------------------- */
-/* Icons */
-/* ----------------------------- */
-.icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  color: inherit; 
-}
-
-/* ----------------------------- */
-/* Basic */
+/* Basic Section */
 /* ----------------------------- */
 .basic {
   display: flex;
@@ -107,18 +125,18 @@ h3, h4 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .basic li {
-  display: flex; 
+  display: flex;
   align-items: center;
   padding: 5px 10px;
-  background-color: #1b1b24;
-  border: 2px solid #262633;
+  background-color: var(--bgcolor3);
+  border: 2px solid var(--bgcolor4);
   border-radius: 5px;
-  color: #fff;
+  color: var(--highlight1);
 }
 
 /* ----------------------------- */
@@ -130,12 +148,12 @@ h3, h4 {
 
 .contact div {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  color: #fff;
   text-align: center;
   margin-top: 15px;
+  color: var(--highlight1);
 }
 
 /* ----------------------------- */
@@ -150,33 +168,33 @@ h3, h4 {
 .skill-label {
   display: block;
   margin-bottom: 4px;
-  color: #fff;
+  color: var(--highlight1);
   font-weight: 500;
 }
 
 .skill-background {
   width: 100%;
   height: 16px;
-  background-color: #262633;
+  background-color: var(--bgcolor4);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .skill-fill {
-  height: 100%;
-  background-color: #bc0048;
   width: 0;
+  height: 100%;
+  background-color: var(--highlight3);
   border-radius: 8px;
   transition: width 0.5s ease-in-out;
 }
 
 /* ----------------------------- */
-/* Triple Div / Small Divs */
+/* Triple / Small Divs */
 /* ----------------------------- */
 .triple-div {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
+  justify-content: space-between;
 }
 
 .small-div {
@@ -198,14 +216,14 @@ h3, h4 {
   gap: 15px;
   max-height: 600px;
   overflow-y: auto;
-  overflow-x: hidden; 
-  padding-right: 10px; 
+  overflow-x: hidden;
+  padding-right: 10px;
   scroll-behavior: smooth;
 }
 
 .project-card {
-  background-color: #1b1b24;
-  border: 2px solid #262633;
+  background-color: var(--bgcolor3);
+  border: 2px solid var(--bgcolor4);
   border-radius: 10px;
   width: 100%;
   flex-shrink: 0;
@@ -223,83 +241,82 @@ h3, h4 {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-}
-
-.project-content h2,
-.project-content h4 {
   width: 100%;
 }
 
 .project-content h4 {
-  color: #fff;
+  color: var(--highlight1);
 }
 
-.project-link-container{
-  width: 100%;
+.project-link-container {
   display: flex;
   gap: 10px;
+  width: 100%;
 }
 
-.project-link-container a{
+.project-link-container a {
   flex: 1;
-  color: #fff;
+  color: var(--highlight1);
   margin-top: 10px;
 }
 
-/* ----------------------------- */
-/* Scrollbar */
-/* ----------------------------- */
 .projects-container::-webkit-scrollbar {
   width: 10px;
 }
 
 .projects-container::-webkit-scrollbar-track {
-  background-color: #262633;
+  background-color: var(--bgcolor4);
   border-radius: 5px;
 }
 
 .projects-container::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: var(--highlight1);
   border-radius: 5px;
 }
 
 .projects-container::-webkit-scrollbar-thumb:hover {
-  background-color: #bc0048;
+  background-color: var(--highlight3);
 }
 
 /* ----------------------------- */
-/* Links */
+/* Links & Buttons */
 /* ----------------------------- */
 a {
-  display: flex; 
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: inherit;
   padding: 5px 10px;
-  background-color: #262633;
+  background-color: var(--bgcolor4);
   border-radius: 5px;
   text-align: center;
-  transition: scale 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.project-content a{
-  background-color: #2e2e3d;
+.project-content a {
+  background-color: var(--bgcolor5);
 }
 
 a:hover {
-  scale: 1.1;
-  color: #bc0048;
+  transform: translateY(-4px);
+  color: var(--highlight3);
 }
 
 /* ----------------------------- */
-/* Media stuff */
+/* Icons */
+/* ----------------------------- */
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: inherit;
+}
+
+/* ----------------------------- */
+/* Responsive Styles */
 /* ----------------------------- */
 @media (max-width: 768px) {
-  #root {
-    min-height: 100vh;
-  }
-
   body {
     overflow: visible;
   }
