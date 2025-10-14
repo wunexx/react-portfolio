@@ -3,13 +3,20 @@ import SkillBar from './components/SkillBar.tsx';
 import Project from './components/Project.tsx';
 
 import { GlobeAltIcon, MapPinIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import { FaGithub, FaTelegramPlane, FaEnvelope, FaItchIo } from 'react-icons/fa';
+import { FaGithub, FaTelegramPlane, FaEnvelope, FaItchIo, FaYoutube } from 'react-icons/fa';
 import './App.css';
 
 function App() {
   return (
     <>
+      <div className="blob-container">
+        <div className="blob blob-center"></div>
+        <div className="blob blob-bottom-left"></div>
+        <div className="blob blob-middle-right"></div>
+       </div>
+    
       <div className='container'>
+
         <div className='column'>
           <div className="basic">
             <div>
@@ -70,6 +77,8 @@ function App() {
                   <FaEnvelope className="icon"/>Gmail</a>
               <a href="https://t.me/wunex1" target="_blank" rel="noopener noreferrer">
               <FaTelegramPlane className="icon"/>Telegram</a>
+              <a href="https://www.youtube.com/@wunexxx" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="icon"/>Youtube</a>
             </div>
           </div>
         </div>
