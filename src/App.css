@@ -88,17 +88,17 @@ h3, h4, li {
   padding: 16px;
   transition: transform 0.2s ease, border 0.2s ease;
 }
-
-.basic:hover,
-.skills:hover,
-.about-me:hover,
-.projects:hover,
-.contact:hover,
-.small-div:hover {
-  transform: translateY(-3px);
-  border: 2px solid var(--highlight1);
+@media (hover: hover) and (pointer: fine) {
+  .basic:hover,
+  .skills:hover,
+  .about-me:hover,
+  .projects:hover,
+  .contact:hover,
+  .small-div:hover {
+    transform: translateY(-3px);
+    border: 2px solid var(--highlight1);
+  }
 }
-
 /* ----------------------------- */
 /* Basic Section */
 /* ----------------------------- */
@@ -155,6 +155,10 @@ h3, h4, li {
   text-align: center;
   margin-top: 15px;
   color: var(--highlight1);
+}
+
+.contact a{
+  flex: 3;
 }
 
 /* ----------------------------- */
@@ -299,9 +303,11 @@ a {
   background-color: var(--bgcolor5);
 }
 
-a:hover {
-  transform: translateY(-4px);
-  color: var(--highlight2);
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    transform: translateY(-4px);
+    color: var(--highlight2);
+  }
 }
 
 /* ----------------------------- */
@@ -445,5 +451,12 @@ a:hover {
   .blob {
     width: 300px;
     filter: blur(40px);
+  }
+
+  .contact div{
+    flex-direction: column;
+  }
+  .contact a{
+    width: 100%;
   }
 }
