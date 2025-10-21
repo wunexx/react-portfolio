@@ -190,9 +190,7 @@ h3, h4, li {
   height: 100%;
   background-color: var(--highlight2);
   border-radius: 8px;
-  transition: width 0.5s ease-in-out;
 }
-
 /* ----------------------------- */
 /* Triple / Small Divs */
 /* ----------------------------- */
