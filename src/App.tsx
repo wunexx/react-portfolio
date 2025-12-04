@@ -1,9 +1,10 @@
 import { images } from "./images.tsx";
 import SkillBar from './components/SkillBar.tsx';
 import Project from './components/Project.tsx';
+import SmallDiv from "./components/SmallDiv.tsx";
 
 import { GlobeAltIcon, MapPinIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import { FaGithub, FaTelegramPlane, FaEnvelope, FaItchIo, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaTelegramPlane, FaEnvelope, FaItchIo, FaPhone } from 'react-icons/fa';
 import './App.css';
 
 function App() {
@@ -52,21 +53,14 @@ function App() {
         <div className='column'>
           <div className="about-me">
               <h2>About Me</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+              <h3>I’m a 17-year-old aspiring programmer based in Katowice, currently studying in the 3rd grade of a technical school with a focus on software development. I’ve been passionate about programming for years and love building larger, more complex systems such as procedural dungeon generators and full game frameworks. Game development is my favorite area of programming, and I regularly participate in game jams to improve my skills and experiment with new ideas.</h3>
+              <br></br>
+              <h3> I originally come from Ukraine, where I completed eight years of schooling before relocating to Poland. I finished elementary school here with strong exam results and continue to push myself academically. Outside of programming, I enjoy going to the gym and playing computer games. I’m always looking to expand my knowledge, explore new technologies, and take on projects that challenge me to grow as a developer.</h3>
           </div>
           <div className="triple-div">
-            <div className="small-div">
-              <h2>3+</h2>
-              <h4> Years Of Programming</h4>
-            </div>
-            <div className="small-div">
-              <h2>Huge</h2>
-              <h4>Love For Programming</h4>
-            </div>
-            <div className="small-div">
-              <h2>Eager</h2>
-              <h4>To Learn</h4>
-            </div>
+            <SmallDiv h2="" h3="3+ Years of Programming" />
+            <SmallDiv h2="" h3="Game Dev My Biggest Passion" />
+            <SmallDiv h2="" h3="Always Eager to Learn" />
           </div>
           <div className="contact">
             <h2>Contact Me</h2>
@@ -76,9 +70,12 @@ function App() {
               <a href="mailto:xwunex@gmail.com">
                   <FaEnvelope className="icon"/>Gmail</a>
               <a href="https://t.me/wunex1" target="_blank" rel="noopener noreferrer">
-              <FaTelegramPlane className="icon"/>Telegram</a>
-              <a href="https://www.youtube.com/@wunexxx" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="icon"/>Youtube</a>
+                <FaTelegramPlane className="icon"/>Telegram</a>
+              <a href="https://wunex.itch.io/" target="_blank" rel="noopener noreferrer">
+                <FaItchIo className="icon"/>Itch.io</a>
+              <a href="tel:+48576140248">
+                <FaPhone className="icon"/>Phone
+              </a>
             </div>
           </div>
         </div>
@@ -88,6 +85,10 @@ function App() {
             <h2>My Projects</h2>
 
             <div className="projects-container">
+              <Project image={images.aural} name="Aural" desc="Aural is a 2D dungeon crawler built with Unity and C#, created in 30 days for the Game Off 2025 game jam." links={[
+                {label: "Github", url: "https://github.com/wunexx/Aural", icon: FaGithub},
+                {label: "Itch.io", url: "https://wunex.itch.io/aural", icon: FaItchIo}
+              ]}></Project>
               <Project image={images.fightingAgents} name="Fighter AI Agents" desc="AI agents battle to secure a win in a 2D arena. Made with Unity 2D and ML-Agents." links={[
                 {label: "Github", url: "https://github.com/wunexx/Knight-Agents", icon: FaGithub},
                 {label: "Project", url: "https://wunexx.github.io/Knight-Agents/", icon: ArrowTopRightOnSquareIcon}
@@ -98,12 +99,12 @@ function App() {
                 {label: "Project", url: "https://wunexx.github.io/Soccer-Agents/", icon: ArrowTopRightOnSquareIcon}
               ]}></Project>
 
-              <Project image={images.physicsSimulation} name="Physics Simulation" desc="Simple Cellular Automata physics simulation made with pygame!" links={[
-                {label: "Github", url: "https://github.com/wunexx/Physics-Simulation", icon: FaGithub}
-              ]}></Project>
-
               <Project image={images.slimefactory} name="Slime Factory" desc="Slime-producing idle game built in Unity 2D." links={[
                 {label: "Itch.io", url: "https://wunex.itch.io/slime-factory", icon: FaItchIo}
+              ]}></Project>
+
+              <Project image={images.physicsSimulation} name="Physics Simulation" desc="Simple Cellular Automata physics simulation made with pygame!" links={[
+                {label: "Github", url: "https://github.com/wunexx/Physics-Simulation", icon: FaGithub}
               ]}></Project>
 
               <Project image={images.space} name="Space Simulation" desc="Space simulation built in Python with Pygame, using real physics formulas!" links={[

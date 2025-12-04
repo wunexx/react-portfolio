@@ -6,6 +6,7 @@ import slimefactory from "./assets/slimefactory.gif";
 import aiMazeAgent from "./assets/aiMazeAgent.gif";
 import soccerAgent from "./assets/agentSoccers.gif";
 import fightingAgents from "./assets/fightingAgents.gif";
+import aural from "./assets/aural.gif";
 
 export const images = {
     logo,
@@ -15,5 +16,6 @@ export const images = {
     slimefactory,
     aiMazeAgent,
     soccerAgent,
-    fightingAgents
+    fightingAgents,
+    aural
 }

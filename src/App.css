@@ -1,6 +1,3 @@
-/* ----------------------------- */
-/* Base Colors & Variables */
-/* ----------------------------- */
 :root {
   --bgcolor1: #0a1418;
   --bgcolor2: #101c20;
@@ -12,9 +9,6 @@
   --highlight2: #ff6f3c;
 }
 
-/* ----------------------------- */
-/* Global Styles */
-/* ----------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -50,9 +44,7 @@ h3, h4, li {
   color: var(--highlight1);
 }
 
-/* ----------------------------- */
-/* Layout Containers */
-/* ----------------------------- */
+
 .container {
   display: flex;
   gap: 16px;
@@ -73,9 +65,6 @@ h3, h4, li {
   gap: 16px;
 }
 
-/* ----------------------------- */
-/* Card / Div Styles */
-/* ----------------------------- */
 .basic,
 .skills,
 .about-me,
@@ -99,9 +88,7 @@ h3, h4, li {
     border: 2px solid var(--highlight1);
   }
 }
-/* ----------------------------- */
-/* Basic Section */
-/* ----------------------------- */
+
 .basic {
   display: flex;
   flex-direction: column;
@@ -140,9 +127,6 @@ h3, h4, li {
   color: var(--highlight1);
 }
 
-/* ----------------------------- */
-/* Contact Section */
-/* ----------------------------- */
 .contact h2 {
   text-align: center;
 }
@@ -161,9 +145,6 @@ h3, h4, li {
   flex: 3;
 }
 
-/* ----------------------------- */
-/* Skills Section */
-/* ----------------------------- */
 .skill-container {
   display: flex;
   flex-direction: column;
@@ -191,9 +172,7 @@ h3, h4, li {
   background-color: var(--highlight2);
   border-radius: 8px;
 }
-/* ----------------------------- */
-/* Triple / Small Divs */
-/* ----------------------------- */
+
 .triple-div {
   display: flex;
   gap: 16px;
@@ -210,9 +189,6 @@ h3, h4, li {
   text-align: center;
 }
 
-/* ----------------------------- */
-/* Projects Section */
-/* ----------------------------- */
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -281,9 +257,6 @@ h3, h4, li {
   background-color: var(--highlight2);
 }
 
-/* ----------------------------- */
-/* Links & Buttons */
-/* ----------------------------- */
 a {
   display: flex;
   justify-content: center;
@@ -307,19 +280,12 @@ a {
     color: var(--highlight2);
   }
 }
-
-/* ----------------------------- */
-/* Icons */
-/* ----------------------------- */
 .icon {
   width: 16px;
   height: 16px;
   margin-right: 8px;
   color: inherit;
 }
-/* ----------------------------- */
-/* Background */
-/* ----------------------------- */
 
 .blob-container {
   position: fixed;
@@ -412,10 +378,6 @@ a {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
-/* ----------------------------- */
-/* Responsive Styles */
-/* ----------------------------- */
 @media (max-width: 1200px)
 {
   body {
